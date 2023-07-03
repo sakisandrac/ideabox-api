@@ -29,14 +29,6 @@ app.post('/api/v1/ideas', (req, res) => {
     }
   }
 
-
-    // Check that the userID is a number
-    // if (typeof userID !== 'number') {
-    //   return res.status(422).json({
-    //     message: `Invalid userID data type. userID must be a number.`
-    //   })
-    // }
-
     app.locals.ideas.push({ id, title, description })
     res.status(201).json({ 
       message: `your idea for ${title} was successfully added`,
